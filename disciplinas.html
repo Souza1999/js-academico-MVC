@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Disciplinas - Yuri</title>
+</head>
+
+<body>
+
+    <h3>Alunos</h3>
+    Nome!!!<input id="nome"><br>
+    Idade!!!:<input id="idade" type="number"><br>
+    Matrícula!!!:<input id="matricula"><br>
+
+    <button onclick="controladorAluno.inserir()">Cadastrar</button>
+    
+    <br><br><br>
+
+    <h3>Discs</h3>
+    Código!!!:<input id="codigo"><br>
+    Nome da Disc!!!:<input id="nome-disciplina"><br>
+
+    <button onclick="controladorDisciplina.inserir()">Cadastrar</button>
+
+    <h3>Alunos e Disciplina</h3>
+    Matrícula do aluno:<input id="matricula-na-disciplina"><br>
+    Codigo da disc:<input id="codigo-discplina"><br>
+    <button onclick="controladorDisciplina.inserirAlunoNaDisciplina()">Adicionar aluno na disciplina</button>
+
+    <ol id="lista-alunos">
+
+    </ol>
+
+    <ol id="lista-disciplinas">
+
+    </ol>
+
+    <ol id="lista-alunos">
+
+    </ol>
+
+    <script src="modelo/aluno.js"></script>
+    <script src="modelo/disciplina.js"></script>
+    <script src="repositorio/aluno_repositorio.js"></script>
+    <script src="repositorio/disciplina_repositorio.js"></script>
+    <script src="servico/aluno_service.js"></script>
+    <script src="servico/disciplina_service.js"></script>
+    <script src="controlador/aluno_controlador.js"></script>
+    <script src="controlador/disciplina_controlador.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
