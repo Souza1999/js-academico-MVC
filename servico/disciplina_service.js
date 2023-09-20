@@ -14,8 +14,7 @@ class DisciplinaService {
     }
 
     pesquisarPorCodigo(codigo) {
-        const r = this.repositorio.listar().filter(disciplina => disciplina.codigo === codigo);
-        return r[0];
+        return this.repositorio.listar().filter(disciplina => disciplina.codigo === codigo);
     }
 
     remover(codigo) {
@@ -27,7 +26,7 @@ class DisciplinaService {
         if (alunoPesquisado.length === 0) {
             throw new Error("Aluno não foi cadastrado!");
         }
-        const discPesquisada = this._repositorio.listar().filter(disc => disc.codigo === codigo);
+        const discPesquisada = this.repositorio.listar().filter(disc => disc.codigo === codigo);
         if (discPesquisada.length === 0) {
             throw new Error("Disciplina não foi cadastrada!");
         }
